@@ -1,3 +1,19 @@
-body {
-    background: #3F3939;
-}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  } 
+  
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+    
+  code {
+    font-size: 80%;
+  }
