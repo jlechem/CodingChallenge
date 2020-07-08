@@ -9,6 +9,24 @@ var employees = [
     ];
 
 // Part 2 Answer Here
+function sortEmployees(employees){
+    var mapped = employees.map(myMap);
+    var grouped = _.groupBy(mapped,"group");
+    return grouped;
+}
+
+function myMap(entry){
+    var name = entry.nameOrder !== undefined && entry.nameOrder.toUpperCase() === "REVERSE" ?
+                name = entry.last + " " + entry.first:
+                name = entry.first + " " + entry.last;
+    
+    var newEntry = {
+      name: name,
+      group: entry.group  
+    };
+
+    return newEntry;
+}
 
 /*****************************************************************************************
 * Bonus
