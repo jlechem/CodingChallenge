@@ -16,13 +16,13 @@ function sortEmployees(employees){
 }
 
 function myMap(entry){
-    let name = entry.nameOrder !== undefined && entry.nameOrder.toUpperCase() === "REVERSE" ?
+    let name = entry.nameOrder !== undefined && entry.nameOrder.toLowerCase() === "reverse" ?
                 name = entry.last + " " + entry.first:
                 name = entry.first + " " + entry.last;
     
     let newEntry = {
       name: name,
-      group: entry.group  
+      group: entry.group.toLowerCase() 
     };
 
     return newEntry;
